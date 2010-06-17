@@ -6,68 +6,121 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>ChicagoDB - Chicago database enthusiasts</title>
 	
-	<link rel="stylesheet" href="stylesheets/reset.css" type="text/css" media="screen" charset="utf-8" />
-	<style type="text/css">
-	  body {
-	    font-size: 1.2em;
-	    line-height: 1.2em;
-	    font-family: Georgia, "Times New Roman", serif;
-	  }
-	  
-	  a { color: #000; }
-	
-	  #main_container {
-	    padding: 20px;
-	  }
-	  
-	  #main_container p { padding-left: 10px; }
-	  
-	  #header img { margin-top: 17px; }
-	  #header a {
-	    display: block;
-	    width: 366px;
-	    height: 91px;
-	    float: left;
-	    
-	    background: transparent url(images/chicagodb.png) no-repeat top left;
-	    text-indent: -9000px;
-	  }
-	  
-	  #next_meeting { width: 500px; background-color: #DDD; padding: 10px; margin: 10px 0; margin-left: 10px; }
-	  #next_meeting p { margin-bottom: 10px; }
-	</style>
+	<link rel="stylesheet" href="stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="stylesheets/blueprint/print.css" type="text/css" media="print">	
+  <!--[if lt IE 8]><link rel="stylesheet" href="stylesheets/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  
+  <style type="text/css">
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    
+    a { color: #000; }
+    
+    #main_container {
+      font-size: 1.5em;
+    }
+    
+    h1#header { margin-bottom: 0; }
+    h1#header a {
+      display: block;
+      width: 366px;
+      height: 91px;
+      float: left;
+      
+      background: transparent url(images/chicagodb.png) no-repeat top left;
+      text-indent: -9000px;
+    }
+    h1 img {
+      margin-top: 17px;
+    }
+    
+    p.tagline {
+      color: #666;
+    }
+    
+    #next_meeting .content {
+      background-color: #CCC;
+      padding: 0.75em;
+    }   
+  </style>
 </head>
 
 <body>
-  <div id="main_container">
-    <h1 id="header"><a href="index.html">ChicagoDB</a> <img src="images/chicago-flag.png" width="75" height="50" /></h1>
-    <p style="color: #666666; width: 550px; clear: both;">
+  <div id="main_container" class="container">
+    <h1 id="header" class="span-24 last">
+      <a href="index.html">ChicagoDB</a> <img src="images/chicago-flag.png" width="75" height="50" />
+    </h1>
+    
+    <p class="tagline span-14 append-10 last">
       An aspiring group of database nerds learning new ways to scale our data. Relational, NoSQL, etc!
     </p>
     
-    <div id="next_meeting">
-      <h3 style="margin-left: 10px; margin-top: 15px; margin-bottom: 15px;">Next Meeting</h3>
-      <p>
-        <strong>RSVP</strong>: <a href="http://gathers.us/events/4be9e4c99dd3f540c9000001">http://gathers.us/events/4be9e4c99dd3f540c9000001</a>
-      </p>
+    <div id="next_meeting" class="span-15">
+      <h3>Next Meeting</h3>
       
-      <p>
-        Ryan Briones and Ethan Gunderson will share some of their experiences with schema design with MongoDB.
-      </p>
+      <div class="content append-bottom" style="width: 100%">
+        <p>
+          <strong>RSVP</strong>: <a href="http://gathers.us/events/4be9e4c99dd3f540c9000001">http://gathers.us/events/4be9e4c99dd3f540c9000001</a>
+        </p>
+
+        <p>
+          Ryan Briones and Ethan Gunderson will share some of their experiences with schema design with MongoDB.
+        </p>
+
+        <p class="bottom">
+          We'll also talk a bit about the future, getting feedback from all of you, so that we can get the most out of ChicagoDB.
+        </p>
+      </div>
       
+      
+      <p>Follow us on twitter: <a href="http://twitter.com/chidb" style="color: #000000">@chidb</a></p>
+      <p>Join the discussion at <a href="http://groups.google.com/group/chicagodb" style="color: #000000">Google Groups</a></p>
+
       <p>
-        We'll also talk a bit about the future, getting feedback from all of you, so that we can get the most out of ChicagoDB.
+        Your organizers: 
+        <a href="http://twitter.com/ryanbriones">@ryanbriones</a> and 
+        <a href="http://twitter.com/ethangunderson">@ethangunderson</a>
       </p>
     </div>
     
-    <p style="margin-top: 15px;">Follow us on twitter: <a href="http://twitter.com/chidb" style="color: #000000">@chidb</a></p>
-    <p style="margin-top: 5px;">Join the discussion at <a href="http://groups.google.com/group/chicagodb" style="color: #000000">Google Groups</a></p>
-    
-    <p style="margin-top: 15px;">
-      Your organizers: 
-      <a href="http://twitter.com/ryanbriones" style="color: #000000">@ryanbriones</a> and 
-      <a href="http://twitter.com/ethangunderson" style="color: #000000">@ethangunderson</a>
-    </p>
+    <div class="prepend-2 span-7 last">
+      <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+      new TWTR.Widget({
+        version: 2,
+        type: 'search',
+        search: '@chidb OR from:chidb',
+        interval: 6000,
+        title: '',
+        subject: 'ChicagoDB',
+        width: 250,
+        height: 375,
+        rpp: 10,
+        theme: {
+          shell: {
+            background: '#8ec1da',
+            color: '#ffffff'
+          },
+          tweets: {
+            background: '#ffffff',
+            color: '#444444',
+            links: '#1985b5'
+          }
+        },
+        features: {
+          scrollbar: true,
+          loop: false,
+          live: true,
+          hashtags: true,
+          timestamp: true,
+          avatars: true,
+          toptweets: false,
+          behavior: 'all'
+        }
+      }).render().start();
+      </script>
+    </div>
   </div>
   
   <script type="text/javascript">
